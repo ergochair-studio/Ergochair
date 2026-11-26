@@ -1,0 +1,19 @@
+{
+  "name": "ErgoChair Studio · Live Posture Monitor",
+  "short_name": "ErgoChair",
+  "description": "Real-time 6-sensor BLE posture monitor with live animation, bad-posture popup alerts, and per-user history.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#070b14",
+  "theme_color": "#070b14",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

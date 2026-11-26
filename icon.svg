@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#070b14"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="24" y="24" width="464" height="464" rx="92" fill="none" stroke="url(#accent)" stroke-width="10" stroke-opacity="0.45"/>
+  <!-- Spine alignment graphic -->
+  <line x1="256" y1="96" x2="256" y2="416" stroke="url(#accent)" stroke-width="24" stroke-linecap="round"/>
+  <line x1="176" y1="152" x2="336" y2="152" stroke="#38bdf8" stroke-width="22" stroke-linecap="round"/>
+  <line x1="152" y1="220" x2="360" y2="220" stroke="#60a5fa" stroke-width="22" stroke-linecap="round"/>
+  <line x1="172" y1="288" x2="340" y2="288" stroke="#818cf8" stroke-width="22" stroke-linecap="round"/>
+  <line x1="196" y1="356" x2="316" y2="356" stroke="#34d399" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="256" cy="152" r="14" fill="#070b14" stroke="#38bdf8" stroke-width="8"/>
+  <circle cx="256" cy="220" r="14" fill="#070b14" stroke="#60a5fa" stroke-width="8"/>
+  <circle cx="256" cy="288" r="14" fill="#070b14" stroke="#818cf8" stroke-width="8"/>
+  <circle cx="256" cy="356" r="14" fill="#070b14" stroke="#34d399" stroke-width="8"/>
+</svg>
