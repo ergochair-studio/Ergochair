@@ -4179,18 +4179,20 @@
       }
 
       function parseMonitor2BlePayload(dataView) {
+        let vals = null;
         const raw = new TextDecoder("utf-8").decode(dataView).trim();
         const parts = raw.split(/[\s,;]+/);
         if (parts.length >= 6) {
           const parsed = parts.slice(0, 6).map((v) => parseInt(v, 10));
-          if (parsed.every((n) => !Number.isNaN(n))) return parsed;
+          if (parsed.every((n) => !Number.isNaN(n))) vals = parsed;
         }
-        if (dataView.byteLength >= 12) {
-          const vals = [];
+        if (!vals && dataView.byteLength >= 12) {
+          vals = [];
           for (let i = 0; i < 6; i++) vals.push(dataView.getUint16(i * 2, true));
-          return vals;
         }
-        return null;
+        if (!vals) return null;
+        // Hardware channel swap: interchange TH-R (index 1) and UB-R (index 5)
+        return [vals[0], vals[5], vals[2], vals[3], vals[4], vals[1]];
       }
 
       async function connectBluetooth() {
